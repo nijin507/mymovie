@@ -86,11 +86,11 @@
     <script>
          function movieSearch() {
         movieName = movie.value
-        fetch(`http://www.omdbapi.com/?s=${movieName}&apikey=78a3f936`).then(data => data.json()).then(data => displayData(data))
+        fetch(`http://www.omdbapi.com/?s=${movieName}&apikey=78a3f936`).then(moviez=>moviez.json()).then(moviez=> displayMovie(moviez))
     }
 
 
-    function displayData(movieData) {
+    function displayMovie(movieData) {
         
         movieName1 = movieData.Search[0].Title
         moviePoster1 = movieData.Search[0].Poster
